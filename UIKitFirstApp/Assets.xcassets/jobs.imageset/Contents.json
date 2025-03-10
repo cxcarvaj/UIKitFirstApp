@@ -1,0 +1,33 @@
+{
+  "images" : [
+    {
+      "filename" : "jobs.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "jobs@2x.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "jobs@3x.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "jobs~ipad.jpg",
+      "idiom" : "ipad",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "jobs~ipad@2x.jpg",
+      "idiom" : "ipad",
+      "scale" : "2x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
