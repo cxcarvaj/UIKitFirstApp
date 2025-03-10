@@ -7,23 +7,35 @@
 
 import UIKit
 
-class ViewControllerLogin: UIViewController {
+final class ViewControllerLogin: UIViewController {
 
+    @IBOutlet weak var user: UITextField!
+    @IBOutlet weak var password: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    func validateLogin() {
+        performSegue(withIdentifier: "ok-login", sender: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func doLogin(_ sender: UIButton) {
+        if user.text == "admin" && password.text == "1234" {
+            validateLogin();
+            password.text = ""
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Usuario y clave no son correctos", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
-    */
-
+    
+    @IBSegueAction func goToUserView(_ coder: NSCoder) -> UserViewController? {
+        let vc = UserViewController(coder: coder)
+        vc?.username = user.text
+        user.text = ""
+        return vc
+    }
+    
 }

@@ -7,14 +7,16 @@
 
 import UIKit
 
-class PrettyImage: UIImageView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+final class PrettyImage: UIImageView {
+    
+    override func awakeFromNib() {
+        Task { @MainActor in
+            layer.shadowColor = UIColor.black.cgColor
+            layer.shadowOffset = CGSize(width: 0, height: 4)
+            layer.shadowOpacity = 0.2
+            layer.cornerRadius = 10
+        }
+        
     }
-    */
 
 }

@@ -9,8 +9,7 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    // Los archivos de Assets, Info.plist y los storyboards siempre deben ir en la carpeta raíz
-
+    // Los archivos de Assets e Info.plist siempre deben ir en la carpeta raíz ya que tienen rutas absolutas
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
